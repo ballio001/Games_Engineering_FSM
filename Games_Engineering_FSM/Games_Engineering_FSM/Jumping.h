@@ -6,7 +6,7 @@ using namespace std;
 
 class Jumping : public State {
 	Jumping();
-	//~Jumping();
+	~Jumping();
 
 	void idle(Animation* a);
 };
