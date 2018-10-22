@@ -3,6 +3,7 @@
 #include "Game.h"
 
 SDL_Texture* playerTex;
+SDL_Rect srcR, destR; //source rectangle / destination rectangle
 
 Game::Game()
 {}
@@ -13,6 +14,7 @@ Game::~Game()
 void Game::init(const char* title, int width, int height, bool fullscreen)
 {
 	int flags = 0;
+	fsm = new Animation();
 
 	if (fullscreen)
 	{
@@ -40,7 +42,6 @@ void Game::handleEvents()
 {
 	//stops game from running when the x is pressed
 	SDL_Event event;
-
 	SDL_PollEvent(&event);
 
 	switch (event.type)
@@ -51,19 +52,40 @@ void Game::handleEvents()
 	default:
 		break;
 	}
+	//needs change
+	while (SDL_PollEvent(&event))
+	{
+		if (event.type == SDL_KEYDOWN)
+		{
+			if (event.key.keysym.sym == SDLK_SPACE)
+			{
+				fsm->jumping();
+				cout << "jumping" << endl;
+			}
+			else if (event.key.keysym.sym == SDLK_c)
+			{
+				fsm->climbing();
+				cout << "climbing" << endl;
+			}
+		}
+	}
 }
 
 void Game::update()
 {
-	cnt++;
-	std::cout << cnt << std::endl;
+	//cnt++;
+
+	destR.h = 600;
+	destR.w = 800;
+
+	//std::cout << cnt << std::endl;
 }
 
 void Game::render()
 {
 	SDL_RenderClear(renderer);
 	//renderer, texture, source rectangle (part you want to draw), dest rect (where you want to draw it)
-	SDL_RenderCopy(renderer, playerTex, NULL, NULL);
+	SDL_RenderCopy(renderer, playerTex, NULL, &destR);
 	SDL_RenderPresent(renderer);
 }
 

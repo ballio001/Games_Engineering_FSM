@@ -1,5 +1,6 @@
 #pragma once
 #include "State.h"
+#include "Idle.h"
 #include <iostream>
 
 using namespace std;
