@@ -10,6 +10,12 @@ Animation::Animation()
 	current = new Idle();
 }
 
+
+void Animation::setCurrent(State* s)
+{
+	current = s;
+}
+
 void Animation::idle() {
 	current->idle(this);
 }

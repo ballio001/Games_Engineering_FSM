@@ -154,19 +154,19 @@
   <ItemGroup>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Climbing.h" />
-    <ClInclude Include="Component.h" />
-    <ClInclude Include="Game.h" />
+    <ClInclude Include="Command.h" />
     <ClInclude Include="Idle.h" />
+    <ClInclude Include="InputHandler.h" />
     <ClInclude Include="Jumping.h" />
-    <ClInclude Include="PositionComponent.h" />
-    <ClInclude Include="SpriteComponent.h" />
+    <ClInclude Include="MacroCommand.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Animation.cpp" />
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
+    <ClCompile Include="MacroCommand.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Idle.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -184,6 +184,8 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="hd_kirby_sprite_sheet.png" />
+    <Image Include="kirby sprite sheet big.png" />
+    <Image Include="kirby sprite sheet tiny.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

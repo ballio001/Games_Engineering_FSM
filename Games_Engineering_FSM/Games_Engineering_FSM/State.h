@@ -12,11 +12,11 @@ public:
 	}
 
 	virtual void jumping(Animation* a) {
-		cout << "State::jumping" << endl;
+		cout << "State::Jumping" << endl;
 	}
 
 	virtual void climbing(Animation* a) {
-		cout << "State::climbing" << endl;
+		cout << "State::Climbing" << endl;
 	}
 };
 

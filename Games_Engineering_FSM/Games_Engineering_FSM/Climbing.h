@@ -1,16 +1,15 @@
 #pragma once
 #include "State.h"
 #include "Idle.h"
-#include <iostream>
 
-using namespace std;
-
-class Climbing : public State {
-	Climbing();
-	//~Climbing();
-
-	void idle(Animation* a) {
-		cout << "Going from Climbing to Idling" << endl;
+class Climbing : public State
+{
+public:
+	Climbing() {};
+	~Climbing() {};
+	void idle(Animation* a)
+	{
+		std::cout << "Going from Climbing to Idling" << std::endl;
 		a->setCurrent(new Idle());
 		delete this;
 	}
