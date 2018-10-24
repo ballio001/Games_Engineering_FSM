@@ -88,5 +88,8 @@
     <Image Include="kirby sprite sheet tiny.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="kirby sprite sheet current.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

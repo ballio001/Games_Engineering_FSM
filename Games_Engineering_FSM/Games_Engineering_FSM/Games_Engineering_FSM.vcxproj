@@ -185,6 +185,7 @@
   <ItemGroup>
     <Image Include="hd_kirby_sprite_sheet.png" />
     <Image Include="kirby sprite sheet big.png" />
+    <Image Include="kirby sprite sheet current.png" />
     <Image Include="kirby sprite sheet tiny.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
