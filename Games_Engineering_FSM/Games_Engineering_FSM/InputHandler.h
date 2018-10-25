@@ -24,8 +24,6 @@ public:
 	Action getCurrentAction();
 	void setCurrentAction(Action a);
 
-
-
 private:
 	Command * buttonX_;
 	Command * buttonY_;
@@ -33,8 +31,8 @@ private:
 	Command * buttonB_;
 	Command * buttonD_;
 	//MacroCommand * macro;
-	std::string m_currentState;
 
 	Animation fsm;
 	Action m_currentAction;
+	std::string m_currentState;
 };

@@ -4,12 +4,10 @@
 InputHandler::InputHandler()
 {
 	m_currentAction = IDLE;
-
 }
 
 InputHandler::~InputHandler()
 {
-
 }
 Action InputHandler::getCurrentAction()
 {
